@@ -1,3 +1,5 @@
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+
 const faithItems = [
   {
     title: "亚伯拉罕与一神教体系",
@@ -19,43 +21,52 @@ const faithItems = [
   },
 ];
 
-const FaithSection = () => (
-  <section id="faith" className="py-24 md:py-32">
-    <div className="container mx-auto px-6 max-w-5xl">
-      <div className="text-center mb-16">
-        <h2 className="font-heading text-3xl md:text-5xl font-light text-primary tracking-wide">
-          多维信仰对应体系
-        </h2>
-        <p className="font-heading text-lg text-silver mt-2 italic">Universal Faith Alignment</p>
-        <div className="gold-line w-24 mx-auto mt-6" />
-        <p className="text-foreground/70 mt-6 max-w-xl mx-auto leading-relaxed text-sm">
-          "我们尊重每一种信仰，并为您匹配最精准的法则。"
-          真正的干预机制应当与您的底层信仰系统深度契合。
-        </p>
-        <p className="text-foreground/50 mt-2 max-w-xl mx-auto leading-relaxed text-xs italic">
-          "We honour every faith and match you with the most precise metaphysical framework."
-          True intervention must deeply resonate with your foundational belief system.
-        </p>
-      </div>
+const FaithSection = () => {
+  const { ref: headerRef, visible: headerVisible } = useScrollReveal();
+  const { ref: cardsRef, visible: cardsVisible } = useScrollReveal(0.1);
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {faithItems.map((item, i) => (
-          <div
-            key={i}
-            className="group border border-border hover:border-primary/40 bg-card p-8 transition-all duration-500 hover:glow-gold rounded-sm"
-          >
-            <span className="text-primary/30 font-heading text-5xl font-light">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <h3 className="font-heading text-xl text-foreground mt-4 mb-1">{item.title}</h3>
-            <p className="text-xs text-silver tracking-widest uppercase mb-4">{item.subtitle}</p>
-            <p className="text-foreground/70 text-sm leading-relaxed">{item.desc}</p>
-            <p className="text-foreground/45 text-xs leading-relaxed mt-2 italic">{item.descEn}</p>
-          </div>
-        ))}
+  return (
+    <section id="faith" className="py-24 md:py-32">
+      <div className="container mx-auto px-6 max-w-5xl">
+        <div
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-700 ${headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+        >
+          <h2 className="font-heading text-3xl md:text-5xl font-light text-primary tracking-wide">
+            多维信仰对应体系
+          </h2>
+          <p className="font-heading text-lg text-silver mt-2 italic">Universal Faith Alignment</p>
+          <div className="gold-line w-24 mx-auto mt-6" />
+          <p className="text-foreground/70 mt-6 max-w-xl mx-auto leading-relaxed text-sm">
+            "我们尊重每一种信仰，并为您匹配最精准的法则。"
+          </p>
+          <p className="text-foreground/50 mt-1 max-w-xl mx-auto leading-relaxed text-xs italic">
+            "We honour every faith and match you with the most precise metaphysical framework."
+          </p>
+        </div>
+
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6">
+          {faithItems.map((item, i) => (
+            <div
+              key={i}
+              className={`group border border-border hover:border-primary/40 bg-card p-8 transition-all duration-700 hover:glow-gold rounded-sm ${
+                cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: cardsVisible ? `${i * 150}ms` : "0ms" }}
+            >
+              <span className="text-primary/25 font-heading text-5xl font-light">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-heading text-xl text-foreground mt-4 mb-1">{item.title}</h3>
+              <p className="text-xs text-silver tracking-widest uppercase mb-4">{item.subtitle}</p>
+              <p className="text-foreground/70 text-sm leading-relaxed">{item.desc}</p>
+              <p className="text-foreground/40 text-xs leading-relaxed mt-3 italic">{item.descEn}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default FaithSection;
