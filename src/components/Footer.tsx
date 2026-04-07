@@ -7,6 +7,9 @@ const Footer = () => (
       <p className="text-muted-foreground text-xs mt-3 tracking-wide">
         © 2026 STAR-DWELL LAB. All Rights Reserved. Strictly Confidential.
       </p>
+      <p className="text-muted-foreground text-xs mt-1 tracking-wide">
+        版权所有 · 严格保密
+      </p>
     </div>
   </footer>
 );
