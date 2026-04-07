@@ -1,3 +1,5 @@
+import wechatQr from "@/assets/wechat-qr.jpg";
+import whatsappQr from "@/assets/whatsapp-qr.jpg";
 import { Phone } from "lucide-react";
 
 const ContactSection = () => (
@@ -12,10 +14,14 @@ const ContactSection = () => (
         <p className="text-foreground/70 mt-6 max-w-xl mx-auto leading-relaxed text-sm">
           每一项咨询或产品的定制，均需结合您的信仰背景与特定行星时刻。为了保证精确度，仅接受提前预约。
         </p>
+        <p className="text-foreground/45 mt-2 max-w-xl mx-auto leading-relaxed text-xs italic">
+          Every consultation or custom product requires alignment with your faith background and specific planetary timing. To ensure precision, we accept appointments only.
+        </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="border border-border bg-card/40 p-10 flex flex-col items-center justify-center rounded-sm">
+      <div className="grid md:grid-cols-3 gap-8">
+        {/* Phone */}
+        <div className="border border-border bg-card p-8 flex flex-col items-center justify-center rounded-sm">
           <Phone className="w-6 h-6 text-primary mb-4" />
           <p className="text-xs text-silver tracking-widest uppercase mb-4">WhatsApp / Call</p>
           <a
@@ -24,17 +30,39 @@ const ContactSection = () => (
           >
             +65 8680 6951
           </a>
-          <p className="text-muted-foreground text-xs mt-2">Singapore</p>
+          <p className="text-muted-foreground text-xs mt-2">Singapore · 新加坡</p>
         </div>
 
-        <div className="border border-border bg-card/40 p-10 flex flex-col items-center justify-center rounded-sm">
-          <div className="w-48 h-48 border border-primary/20 rounded-sm flex items-center justify-center mb-4 bg-secondary/30">
-            <p className="text-muted-foreground text-xs text-center px-4">WeChat QR Code<br />Placeholder</p>
+        {/* WhatsApp QR */}
+        <div className="border border-border bg-card p-8 flex flex-col items-center justify-center rounded-sm">
+          <div className="w-48 h-48 overflow-hidden rounded-sm mb-4">
+            <img
+              src={whatsappQr}
+              alt="WhatsApp QR Code"
+              loading="lazy"
+              width={192}
+              height={192}
+              className="w-full h-full object-cover"
+            />
           </div>
-          <p className="text-foreground/70 text-sm text-center leading-relaxed">
-            扫码添加 Hannah，开启私属逻辑采样之旅
-          </p>
-          <p className="text-silver text-xs mt-2 italic">Scan WeChat QR Code to Connect</p>
+          <p className="text-foreground/70 text-sm text-center">扫码添加 WhatsApp</p>
+          <p className="text-silver text-xs mt-1 italic">Scan to connect via WhatsApp</p>
+        </div>
+
+        {/* WeChat QR */}
+        <div className="border border-border bg-card p-8 flex flex-col items-center justify-center rounded-sm">
+          <div className="w-48 h-48 overflow-hidden rounded-sm mb-4">
+            <img
+              src={wechatQr}
+              alt="WeChat QR Code"
+              loading="lazy"
+              width={192}
+              height={192}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <p className="text-foreground/70 text-sm text-center">扫码添加微信</p>
+          <p className="text-silver text-xs mt-1 italic">Scan to connect via WeChat</p>
         </div>
       </div>
     </div>

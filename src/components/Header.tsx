@@ -12,19 +12,19 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: "信仰体系", href: "#faith" },
-    { label: "决策咨询", href: "#strategy" },
-    { label: "秘术工坊", href: "#workshop" },
-    { label: "关于顾问", href: "#about" },
-    { label: "联络预约", href: "#contact" },
+    { label: "信仰体系 Faith", href: "#faith" },
+    { label: "决策咨询 Strategy", href: "#strategy" },
+    { label: "玄学精品 Boutique", href: "#workshop" },
+    { label: "关于顾问 About", href: "#about" },
+    { label: "联络预约 Contact", href: "#contact" },
   ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+          : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
@@ -37,7 +37,7 @@ const Header = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm tracking-widest uppercase text-silver hover:text-primary transition-colors duration-300"
+              className="text-xs tracking-widest uppercase text-silver hover:text-primary transition-colors duration-300"
             >
               {item.label}
             </a>
@@ -62,7 +62,7 @@ const Header = () => {
       </div>
 
       {menuOpen && (
-        <div className="lg:hidden bg-background/95 backdrop-blur-md border-t border-border">
+        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border">
           <nav className="flex flex-col px-6 py-4 gap-4">
             {navItems.map((item) => (
               <a
