@@ -1,4 +1,6 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const StrategySection = () => {
   const { ref, visible } = useScrollReveal();
@@ -19,7 +21,10 @@ const StrategySection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-border bg-background p-10 hover:border-primary/30 transition-all duration-500 rounded-sm hover:glow-gold">
+            <Link
+              to="/strategy/retainer"
+              className="group border border-border bg-background p-10 hover:border-primary/30 transition-all duration-500 rounded-sm hover:glow-gold block"
+            >
               <h3 className="font-heading text-2xl text-foreground mb-2">长期战略陪跑</h3>
               <p className="text-xs text-silver tracking-widest uppercase mb-6">Retainer Model</p>
               <p className="text-foreground/70 text-sm leading-relaxed">
@@ -28,8 +33,15 @@ const StrategySection = () => {
               <p className="text-foreground/40 text-xs leading-relaxed mt-3 italic">
                 Confidential, ongoing strategic support for business owners. Employing Geomancy for scenario analysis and risk assessment.
               </p>
-            </div>
-            <div className="border border-border bg-background p-10 hover:border-primary/30 transition-all duration-500 rounded-sm hover:glow-gold">
+              <div className="flex items-center gap-2 mt-5 text-primary text-xs tracking-widest group-hover:gap-3 transition-all duration-300">
+                <span>查看详情 / View Details</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
+            <Link
+              to="/strategy/temporal"
+              className="group border border-border bg-background p-10 hover:border-primary/30 transition-all duration-500 rounded-sm hover:glow-gold block"
+            >
               <h3 className="font-heading text-2xl text-foreground mb-2">时序规律解析</h3>
               <p className="text-xs text-silver tracking-widest uppercase mb-6">Temporal Analysis</p>
               <p className="text-foreground/70 text-sm leading-relaxed">
@@ -38,7 +50,11 @@ const StrategySection = () => {
               <p className="text-foreground/40 text-xs leading-relaxed mt-3 italic">
                 Leveraging classical Western astrology to pinpoint the precise "moment," ensuring major decisions synchronise with cosmic timing.
               </p>
-            </div>
+              <div className="flex items-center gap-2 mt-5 text-primary text-xs tracking-widest group-hover:gap-3 transition-all duration-300">
+                <span>查看详情 / View Details</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

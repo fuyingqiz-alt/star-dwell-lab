@@ -1,23 +1,28 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const faithItems = [
   {
     title: "亚伯拉罕与一神教体系",
     subtitle: "Abrahamic & Monotheistic",
-    desc: "针对基督徒使用古典诗篇玄法 (Psalm Magic)；天主教背景引入圣徒连结 (Saints Intercession)；穆斯林客户提供基于《古兰经》系统的对应方案。",
-    descEn: "For Christians: Classical Psalm Magic. For Catholics: Saints Intercession. For Muslims: Quranic-based alignment solutions.",
+    desc: "针对基督徒使用古典诗篇玄法 (Psalm Magic)；\n天主教背景引入圣徒连结 (Saints Intercession)；\n穆斯林客户提供基于《古兰经》系统的对应方案。",
+    descEn: "For Christians: Classical Psalm Magic.\nFor Catholics: Saints Intercession.\nFor Muslims: Quranic-based alignment solutions.",
+    link: "/faith/abrahamic",
   },
   {
     title: "东方古典与区域信仰",
     subtitle: "Eastern & Regional Traditions",
-    desc: "针对佛教徒运用正统佛法仪轨；印度教背景运用特定的神祇与法则进行对应。",
-    descEn: "For Buddhists: Orthodox Buddhist ritual protocols. For Hindus: deity-specific and dharmic alignments.",
+    desc: "针对佛教徒运用正统佛法仪轨；\n印度教背景运用特定的神祇与法则进行对应。",
+    descEn: "For Buddhists: Orthodox Buddhist ritual protocols.\nFor Hindus: deity-specific and dharmic alignments.",
+    link: "/faith/eastern",
   },
   {
     title: "自然法则与非宗教体系",
     subtitle: "Natural Law & Secular Systems",
-    desc: "调用七星魔法 (7-Star Magic)、行星频率校准、系统草药学以及希腊纸草玄法 (PGM)。",
-    descEn: "Utilising 7-Star Magic, planetary frequency calibration, systematic herbalism, and Greek Magical Papyri (PGM).",
+    desc: "调用七星魔法 (7-Star Magic)、行星频率校准、\n系统草药学以及希腊纸草玄法 (PGM)。",
+    descEn: "Utilising 7-Star Magic, planetary frequency calibration,\nsystematic herbalism, and Greek Magical Papyri (PGM).",
+    link: "/faith/natural",
   },
 ];
 
@@ -47,9 +52,10 @@ const FaithSection = () => {
 
         <div ref={cardsRef} className="grid md:grid-cols-3 gap-6">
           {faithItems.map((item, i) => (
-            <div
+            <Link
+              to={item.link}
               key={i}
-              className={`group border border-border hover:border-primary/40 bg-card p-8 transition-all duration-700 hover:glow-gold rounded-sm ${
+              className={`group border border-border hover:border-primary/40 bg-card p-8 transition-all duration-700 hover:glow-gold rounded-sm block ${
                 cardsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: cardsVisible ? `${i * 150}ms` : "0ms" }}
@@ -59,9 +65,13 @@ const FaithSection = () => {
               </span>
               <h3 className="font-heading text-xl text-foreground mt-4 mb-1">{item.title}</h3>
               <p className="text-xs text-silver tracking-widest uppercase mb-4">{item.subtitle}</p>
-              <p className="text-foreground/70 text-sm leading-relaxed">{item.desc}</p>
-              <p className="text-foreground/40 text-xs leading-relaxed mt-3 italic">{item.descEn}</p>
-            </div>
+              <p className="text-foreground/70 text-sm leading-relaxed whitespace-pre-line">{item.desc}</p>
+              <p className="text-foreground/40 text-xs leading-relaxed mt-3 italic whitespace-pre-line">{item.descEn}</p>
+              <div className="flex items-center gap-2 mt-5 text-primary text-xs tracking-widest group-hover:gap-3 transition-all duration-300">
+                <span>了解更多 / Learn More</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </div>
+            </Link>
           ))}
         </div>
       </div>
