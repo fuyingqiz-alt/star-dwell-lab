@@ -25,7 +25,7 @@ export default function SalonSection() {
   const { english } = useLanguage();
   const { ref, visible } = useScrollReveal(0.05);
   return <section id="salon" className="section-space cosmos-band overflow-hidden"><div className="star-dust" aria-hidden="true" /><div className="page-width relative">
-    <div className="section-heading"><p className="eyebrow">SALONS</p><h2>{english ? "In-person salons in Singapore" : "线下沙龙"}</h2><div className="celestial-divider mt-6 justify-start" aria-hidden="true"><MoonStar className="w-4 h-4 moon-ornament" /></div><p className="text-muted-foreground mt-5">{english ? "Beyond online consultations — small gatherings where we meet, learn and make things together." : "除了线上咨询，也有小规模的线下聚会，一起见面、学习和动手。"}</p></div>
+    <div className="section-heading"><p className="eyebrow">SALONS</p><h2>{english ? "In-person salons in Singapore" : "线下沙龙"}</h2><div className="celestial-divider mt-6 justify-start" aria-hidden="true"><MoonStar className="w-4 h-4 moon-ornament" /></div><p className="text-muted-foreground mt-5">{english ? "Beyond online consultations — small gatherings where we meet, learn and make things together. Dates are arranged case by case, so ask about the next session." : "除了线上咨询，也有小规模的线下聚会，一起见面、学习和动手。沙龙档期不固定，欢迎先咨询下期安排。"}</p></div>
     <div ref={ref} className={`grid md:grid-cols-2 gap-5 reveal ${visible ? "is-visible" : ""}`}>
       {salons.map(salon => <article key={salon.en} className="service-card border border-border bg-card rounded-sm p-7 md:p-10 flex flex-col">
         <salon.icon className="w-8 h-8 text-primary mb-8" />

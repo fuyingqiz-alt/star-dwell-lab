@@ -3,7 +3,7 @@ export interface SocialLink { id: SocialPlatform; name: string; url: string; gro
 // Fill in real URLs only; entries with an empty url are never shown.
 export const socialLinks: SocialLink[] = [
   { id: "instagram", name: "Instagram", url: "https://www.instagram.com/stardwelllab/", group: "brand" },
-  { id: "tiktok", name: "TikTok", url: "", group: "brand" },
+  { id: "tiktok", name: "TikTok", url: "https://www.tiktok.com/@_miracle809", group: "brand" },
   { id: "facebook", name: "Facebook", url: "https://www.facebook.com/share/1A2ce173z4", group: "brand" },
   { id: "youtube", name: "YouTube", url: "https://www.youtube.com/channel/UCRAMrW_4vqbQjQTuvioC32g", group: "brand" },
   { id: "channels", name: "视频号", url: "", group: "brand" },

@@ -17,6 +17,7 @@ describe("rules", () => {
   it("shows the brand links the owner provided, with tracking params stripped", () => {
     expect(visibleSocialLinks("brand").map(i => i.url)).toEqual([
       "https://www.instagram.com/stardwelllab/",
+      "https://www.tiktok.com/@_miracle809",
       "https://www.facebook.com/share/1A2ce173z4",
       "https://www.youtube.com/channel/UCRAMrW_4vqbQjQTuvioC32g",
     ]);
