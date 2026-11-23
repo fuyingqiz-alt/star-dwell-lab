@@ -28,6 +28,16 @@ import feedback74 from "@/assets/feedback/feedback-74.webp";
 import feedback75 from "@/assets/feedback/feedback-75.webp";
 import feedback76 from "@/assets/feedback/feedback-76.webp";
 import feedback77 from "@/assets/feedback/feedback-77.webp";
+import feedback78 from "@/assets/feedback/feedback-78.webp";
+import feedback79 from "@/assets/feedback/feedback-79.webp";
+import feedback80 from "@/assets/feedback/feedback-80.webp";
+import feedback81 from "@/assets/feedback/feedback-81.webp";
+import feedback82 from "@/assets/feedback/feedback-82.webp";
+import feedback83 from "@/assets/feedback/feedback-83.webp";
+import feedback84 from "@/assets/feedback/feedback-84.webp";
+import feedback85 from "@/assets/feedback/feedback-85.webp";
+import feedback86 from "@/assets/feedback/feedback-86.webp";
+import feedback87 from "@/assets/feedback/feedback-87.webp";
 
 export type FeedbackCategory = "experience" | "followup" | "craft";
 export interface Testimonial {
@@ -312,6 +322,96 @@ export const testimonials: Testimonial[] = [
     quote: "昨天刚点上招财蜡烛 今天就收4000+",
     service: "招财蜡烛 · 手作反馈",
     screenshot: feedback77,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "divination-change",
+    category: "experience",
+    quote: "我真的需要改变，我知道了。占卜真的是非常好，不是让你害怕未来，是让你变得更好预防未来会发生对你不好的事情。我必然努力改变，咱们一起",
+    service: "塔罗占卜 · 体验反馈",
+    screenshot: feedback78,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "marriage-timing",
+    category: "followup",
+    quote: "现在谈着21年结婚，正好和阿柒说的对上了",
+    service: "感情时间预测 · 回访反馈",
+    screenshot: feedback79,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "tarot-accurate-repeat",
+    category: "experience",
+    quote: "小姐姐蛮准的……嗯……我确实觉得他在pua我。挺准的，这个隔多久可以算一次呀",
+    service: "感情塔罗 · 体验反馈",
+    screenshot: feedback80,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "video-reading-remembered",
+    category: "followup",
+    quote: "见面说呗，就是比较准？比较准这样的，不会忘，欠你顿饭我都记得",
+    service: "视频占卜 · 回访反馈",
+    screenshot: feedback81,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "candle-movie-date",
+    category: "craft",
+    quote: "我靠，他约我看电影，我去，啊啊啊啊啊",
+    service: "感情蜡烛 · 手作反馈",
+    screenshot: feedback82,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "candle-reconcile",
+    category: "craft",
+    quote: "我昨天跟我对象分了，然后想挽回那种。确实，当时点了以后有2天挽回了，而且特别好",
+    service: "挽回蜡烛 · 手作反馈",
+    screenshot: feedback83,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "romance-prediction",
+    category: "followup",
+    quote: "小姐姐早上好呀，你真的挺厉害的，说准了这会我有桃花",
+    service: "感情占卜 · 回访反馈",
+    screenshot: feedback84,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "new-life",
+    category: "followup",
+    quote: "最后一次反馈：九月份真的开始新生活了，想好了今年剩下这段时间怎么走，考了普通话，约好了挣人生第一桶金（？，想清了副业的路线，搞明白了如何跟家人相处，和喜欢的人见面了，会相信未来会更好，最后希望会发财",
+    service: "人生方向咨询 · 回访反馈",
+    screenshot: feedback85,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "tuning-loyalty",
+    category: "craft",
+    quote: "太厉害了，你看看第一次数值……跟现在差别太大了。给人的感觉是关系已经定住了",
+    service: "感情调频 · 仪式反馈",
+    screenshot: feedback86,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "tuning-chat-better",
+    category: "craft",
+    quote: "那天晚上调频完，感觉跟我对象聊的就还挺好的。我以为要等个一段时间",
+    service: "感情调频 · 仪式反馈",
+    screenshot: feedback87,
     publicApproved: true,
     deidentified: true,
   },
