@@ -8,6 +8,16 @@ import feedback54 from "@/assets/feedback/feedback-54.webp";
 import feedback55 from "@/assets/feedback/feedback-55.webp";
 import feedback56 from "@/assets/feedback/feedback-56.webp";
 import feedback57 from "@/assets/feedback/feedback-57.webp";
+import feedback58 from "@/assets/feedback/feedback-58.webp";
+import feedback59 from "@/assets/feedback/feedback-59.webp";
+import feedback60 from "@/assets/feedback/feedback-60.webp";
+import feedback61 from "@/assets/feedback/feedback-61.webp";
+import feedback62 from "@/assets/feedback/feedback-62.webp";
+import feedback63 from "@/assets/feedback/feedback-63.webp";
+import feedback64 from "@/assets/feedback/feedback-64.webp";
+import feedback65 from "@/assets/feedback/feedback-65.webp";
+import feedback66 from "@/assets/feedback/feedback-66.webp";
+import feedback67 from "@/assets/feedback/feedback-67.webp";
 
 export type FeedbackCategory = "experience" | "followup" | "craft";
 export interface Testimonial {
@@ -112,6 +122,96 @@ export const testimonials: Testimonial[] = [
     quote: "这种实践的就是你都不知道它会以什么样的方式帮你达成目的。",
     service: "阿拉姆魔碗 · 实践回访",
     screenshot: feedback54,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "guest-count-prediction",
+    category: "followup",
+    quote: "2位有兴趣的嘉宾，2位路演会员的合伙人，1位去过别分会但还在考虑的嘉宾，1位来当替代几次的年轻人。你 4-6，很标准的答案💯",
+    service: "人数判断 · 咨询后回访",
+    screenshot: feedback58,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "returning-client-booking",
+    category: "experience",
+    quote: "好的好的我预约一个，需要给定金吗，多少钱……我就之前在你的另一个号算过，真的准。",
+    service: "年运咨询 · 复购预约",
+    screenshot: feedback59,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "core-issue-insight",
+    category: "experience",
+    quote: "是的，谢谢你。直击了我俩最核心的问题，也是一直存在的问题。",
+    service: "感情咨询 · 问题洞察",
+    screenshot: feedback60,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "big-deal-good-news",
+    category: "followup",
+    quote: "宝贝，你太棒了，我开了大单🥰🥰🥰 这几天进账好几万。原本已经在跟进，来了又价格往上提。",
+    service: "咨询后回访 · 好消息分享",
+    screenshot: feedback61,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "mind-opened",
+    category: "experience",
+    quote: "老师讲得好好🥺……我就一下子感觉开阔了。",
+    service: "咨询体验",
+    screenshot: feedback62,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "report-instant-reaction",
+    category: "experience",
+    quote: "哇塞我来瞅瞅……我不中了哈哈哈哈",
+    service: "咨询报告 · 即时反馈",
+    screenshot: feedback63,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "feels-accurate",
+    category: "experience",
+    quote: "哇，没事的哈哈，谢谢美柒老师，感觉还挺准的。",
+    service: "咨询报告 · 体验反馈",
+    screenshot: feedback64,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "detailed-report",
+    category: "experience",
+    quote: "谢谢美柒老师！！～超级无敌详细了，父母关系这块和我自己感受到的信息非常相似，事业财富的建议也给了我好多信心😉 看到前世的部分还掉了两滴小珍珠 hhhh",
+    service: "深度报告 · 体验反馈",
+    screenshot: feedback65,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "business-wealth-chart",
+    category: "craft",
+    quote: "Hannah 是一位用“魔法”帮你植入信念的吠陀风水师。比如她说“招财”也分很多种，会让人真的静下来思考，到底我想赚/能赚/开心赚-怎样的钱；包括“桃花”和“缘分”，也不仅是男女之情，而是贵人之遇。愿你也收到她的魔法助力，永远相信自己会【越来越好】",
+    service: "商业招财盘 · 客户评价",
+    screenshot: feedback66,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "so-accurate",
+    category: "experience",
+    quote: "这个说的好准啊",
+    service: "咨询报告 · 体验反馈",
+    screenshot: feedback67,
     publicApproved: true,
     deidentified: true,
   },
