@@ -8,7 +8,7 @@ import ImageZoom from "./ImageZoom";
 
 export default function ContactSection() {
   const { english } = useLanguage();
-  return <section id="contact" className="section-space border-t border-border bg-secondary/50"><div className="page-width grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
+  return <section id="contact" className="section-space border-t border-border bg-secondary/50 cosmos-band overflow-hidden"><div className="star-dust" aria-hidden="true" /><div className="page-width relative grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
     <div><p className="eyebrow mb-5">LET’S TALK</p><h2 className="section-title">{english ? "Make time for your question." : <>把你的问题，<br />留一点时间好好聊。</>}</h2><p className="text-muted-foreground leading-7 mt-6">{english ? "Message Hannah on WeChat or WhatsApp to discuss your question and arrange an online voice consultation." : "通过微信或 WhatsApp 联系美柒，沟通你想咨询的问题，预约线上语音咨询。"}</p>
       <Button asChild size="lg" className="mt-8 h-12"><a href={bookingLink("咨询预约 / Consultation")} target="_blank" rel="noopener noreferrer"><MessageCircle />{english ? "Book on WhatsApp" : "WhatsApp 预约"}<ArrowUpRight /></a></Button>
       <p className="text-primary mt-5 text-sm">+65 8680 6951 <span className="text-muted-foreground ml-2">{english ? "Singapore" : "新加坡"}</span></p>

@@ -9,6 +9,11 @@ export default function HeroSection() {
     <div className="hero-glow absolute inset-0" />
     <StarChart />
     <div className="hero-shade absolute inset-0" />
+    <span className="sparkle text-xl left-[8%] top-[22%]" aria-hidden="true">✦</span>
+    <span className="sparkle sparkle-violet text-2xl left-[16%] top-[64%]" style={{ animationDelay: "1.2s" }} aria-hidden="true">✧</span>
+    <span className="sparkle text-sm left-[46%] top-[14%]" style={{ animationDelay: "2s" }} aria-hidden="true">✦</span>
+    <span className="sparkle sparkle-violet text-lg right-[10%] top-[70%]" style={{ animationDelay: "0.6s" }} aria-hidden="true">☾</span>
+    <span className="sparkle text-base right-[24%] top-[18%]" style={{ animationDelay: "2.8s" }} aria-hidden="true">✧</span>
     <div className="page-width relative z-10 py-14 md:py-20">
       <p className="eyebrow mb-8 animate-fade-up flex items-center gap-4">
         <span className="inline-block w-10 h-px bg-primary/60" aria-hidden="true" />
@@ -25,7 +30,7 @@ export default function HeroSection() {
         {english ? "Singapore · Online voice consultations" : "新加坡 · 线上语音咨询"}
       </p>
       <Button asChild size="lg" className="mt-10 h-12 btn-glow animate-fade-up-delay-3"><a href="#strategy">{english ? "View consultations & prices" : "查看咨询与价格"}<ArrowUpRight /></a></Button>
-      <div className="mt-14 text-primary/70 flex items-center gap-4 float-subtle" aria-hidden="true"><span className="w-16 h-px bg-primary/40" /><ArrowDown className="w-4 h-4" /></div>
+      <div className="mt-14 text-primary/70 flex items-center gap-4 float-subtle" aria-hidden="true"><span className="w-16 h-px bg-primary/40" /><MoonStar className="w-4 h-4 moon-ornament" /><ArrowDown className="w-4 h-4" /></div>
     </div>
   </section>;
 }

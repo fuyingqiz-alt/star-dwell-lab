@@ -173,27 +173,66 @@
 }
 @layer base {
   :root {
-    --background: 268 45% 7%; --card: 268 38% 11%; --popover: 268 40% 9%;
-    --secondary: 268 32% 13%; --muted: 268 25% 17%; --input: 268 25% 22%;
-    --purple-glow: 275 60% 35%;
+    --background: 268 55% 5%; --card: 268 42% 9%; --popover: 268 45% 7%;
+    --secondary: 270 38% 11%; --muted: 268 28% 15%; --input: 268 28% 20%;
+    --purple-glow: 275 70% 42%; --violet-haze: 262 65% 55%; --starlight: 46 80% 88%;
   }
 }
 @layer components {
   .hero-section { min-height: 100dvh; }
-  .hero-glow { background: radial-gradient(ellipse at 70% 45%, hsl(var(--purple-glow) / 0.45), transparent 60%), radial-gradient(ellipse at 10% 90%, hsl(var(--primary) / 0.08), transparent 50%); }
-  .hero-shade { background: linear-gradient(90deg, hsl(var(--background) / 0.85) 0%, hsl(var(--background) / 0.35) 60%, transparent); }
-  .text-gradient-gold { background: linear-gradient(105deg, hsl(42 60% 82%) 0%, hsl(var(--primary)) 45%, hsl(38 45% 70%) 75%, hsl(42 60% 84%) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-glow { background:
+    radial-gradient(ellipse 60% 50% at 72% 42%, hsl(var(--purple-glow) / 0.5), transparent 65%),
+    radial-gradient(ellipse 40% 35% at 20% 15%, hsl(var(--violet-haze) / 0.22), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 8% 92%, hsl(var(--primary) / 0.12), transparent 55%); }
+  .hero-shade { background: linear-gradient(90deg, hsl(var(--background) / 0.88) 0%, hsl(var(--background) / 0.4) 55%, hsl(var(--background) / 0.1)); }
+  .text-gradient-gold { background: linear-gradient(105deg, hsl(44 75% 86%) 0%, hsl(var(--primary)) 40%, hsl(36 55% 66%) 70%, hsl(46 85% 88%) 100%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: goldShimmer 7s ease-in-out infinite; }
   .btn-glow { box-shadow: 0 0 24px hsl(var(--primary) / 0.35); }
   .btn-glow:hover { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
   .chart-line { fill: none; stroke: hsl(var(--primary) / 0.35); stroke-width: 0.8; }
   .chart-dash { stroke-dasharray: 2 6; }
   .chart-glyph { fill: hsl(var(--primary) / 0.75); font-size: 20px; }
   .chart-planet { fill: hsl(var(--primary)); filter: drop-shadow(0 0 6px hsl(var(--primary))); }
+  .chart-moon { fill: hsl(var(--starlight)); filter: drop-shadow(0 0 14px hsl(var(--primary) / 0.8)); }
   .spin-slow { animation: spin 120s linear infinite; transform-origin: center; }
   .spin-reverse { animation: spin 80s linear infinite reverse; transform-origin: center; }
   .image-card { @apply overflow-hidden border border-border bg-card rounded-sm; }
   .image-card img { @apply transition-transform duration-700; }
   .image-card:hover img { transform: scale(1.06); }
+
+  /* cosmic section ambience */
+  .cosmos-band { position: relative; background:
+    radial-gradient(ellipse 45% 60% at 88% 8%, hsl(var(--purple-glow) / 0.28), transparent 65%),
+    radial-gradient(ellipse 35% 45% at 4% 95%, hsl(var(--violet-haze) / 0.14), transparent 60%); }
+  .cosmos-band-alt { position: relative; background:
+    radial-gradient(ellipse 40% 55% at 6% 10%, hsl(var(--purple-glow) / 0.24), transparent 65%),
+    radial-gradient(ellipse 35% 40% at 94% 92%, hsl(var(--primary) / 0.08), transparent 55%); }
+  .star-dust { position: absolute; inset: 0; pointer-events: none; background-image:
+    radial-gradient(1.5px 1.5px at 12% 22%, hsl(var(--starlight) / 0.7), transparent),
+    radial-gradient(1px 1px at 34% 68%, hsl(var(--primary) / 0.8), transparent),
+    radial-gradient(1.5px 1.5px at 58% 14%, hsl(var(--starlight) / 0.55), transparent),
+    radial-gradient(1px 1px at 76% 44%, hsl(var(--violet-haze) / 0.9), transparent),
+    radial-gradient(1.5px 1.5px at 90% 78%, hsl(var(--starlight) / 0.6), transparent),
+    radial-gradient(1px 1px at 22% 88%, hsl(var(--primary) / 0.7), transparent),
+    radial-gradient(1px 1px at 47% 40%, hsl(var(--starlight) / 0.45), transparent),
+    radial-gradient(1.5px 1.5px at 68% 88%, hsl(var(--violet-haze) / 0.7), transparent); }
+
+  /* celestial divider: thin gold line with moon & star */
+  .celestial-divider { @apply flex items-center justify-center gap-4 text-primary/70; }
+  .celestial-divider::before, .celestial-divider::after { content: ""; height: 1px; width: 5rem; background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.55)); }
+  .celestial-divider::after { background: linear-gradient(90deg, hsl(var(--primary) / 0.55), transparent); }
+
+  /* floating sparkle glyphs */
+  .sparkle { position: absolute; color: hsl(var(--primary) / 0.55); animation: twinkle 4.5s ease-in-out infinite; pointer-events: none; }
+  .sparkle-violet { color: hsl(var(--violet-haze) / 0.6); }
+
+  /* card hover: gold rim light */
+  .service-card { position: relative; }
+  .service-card:hover { box-shadow: 0 0 0 1px hsl(var(--primary) / 0.35), 0 12px 40px -12px hsl(var(--purple-glow) / 0.45); }
+
+  /* crescent moon ornament */
+  .moon-ornament { color: hsl(var(--primary)); filter: drop-shadow(0 0 10px hsl(var(--primary) / 0.6)); }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .spin-slow, .spin-reverse { animation: none; } }
+@keyframes goldShimmer { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes twinkle { 0%, 100% { opacity: 0.15; transform: scale(0.8); } 50% { opacity: 0.9; transform: scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .spin-slow, .spin-reverse, .sparkle, .text-gradient-gold { animation: none; } }
