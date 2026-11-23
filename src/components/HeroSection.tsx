@@ -15,9 +15,9 @@ export default function HeroSection() {
         STAR-DWELL LAB <span className="text-primary/70">✦</span> 星宅所
       </p>
       <h1 className="hero-title animate-fade-up">
-        {english
-          ? <><span className="block text-foreground">Caught at a crossroads?</span><span className="block text-gradient-gold mt-2">See your choices clearly.</span></>
-          : <><span className="block text-foreground">卡在一个决定上？</span><span className="block text-gradient-gold mt-2">先把眼前的选择看清楚。</span></>}
+        <span className="block text-foreground">星辰有序，</span>
+        <span className="block text-gradient-gold mt-2">心宅自安。</span>
+        <span lang="en" className="block mt-5 font-display italic text-foreground/80 text-[0.42em] tracking-[0.08em] leading-snug">Where the stars align, the soul finds its home.</span>
       </h1>
       <p className="hero-copy mt-8 max-w-xl animate-fade-up-delay-1">{english ? "I’m Hannah, founder of Star Dwell Lab. Through tarot, astrology dice and birth charts, I help you explore choices in career, relationships and life transitions." : "我是美柒 Hannah，星宅所主理人。我用塔罗、占星骰子和星盘，陪你梳理事业、关系和人生转折中的选择。"}</p>
       <p className="mt-6 flex items-center gap-2.5 text-primary text-sm tracking-[0.25em] animate-fade-up-delay-2">
