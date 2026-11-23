@@ -7,7 +7,9 @@ describe("rules", () => {
     expect(visibleSocialLinks("brand", items).map(i => i.id)).toEqual(["tiktok"]);
   });
   it("shows the confirmed prices", () => {
-    expect(consultations.map(c => c.price)).toEqual([99, 168, 198]);
+    expect(consultations.map(c => c.price)).toEqual([60, 188, 188]);
+    expect(consultations.find(c => c.id === "rhythm")?.minutes).toBe(20);
+    expect(consultations.some(c => c.title.includes("2027"))).toBe(false);
   });
   it("shows the brand links the owner provided, with tracking params stripped", () => {
     expect(visibleSocialLinks("brand").map(i => i.url)).toEqual([
