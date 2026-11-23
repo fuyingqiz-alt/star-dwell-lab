@@ -18,6 +18,16 @@ import feedback64 from "@/assets/feedback/feedback-64.webp";
 import feedback65 from "@/assets/feedback/feedback-65.webp";
 import feedback66 from "@/assets/feedback/feedback-66.webp";
 import feedback67 from "@/assets/feedback/feedback-67.webp";
+import feedback68 from "@/assets/feedback/feedback-68.webp";
+import feedback69 from "@/assets/feedback/feedback-69.webp";
+import feedback70 from "@/assets/feedback/feedback-70.webp";
+import feedback71 from "@/assets/feedback/feedback-71.webp";
+import feedback72 from "@/assets/feedback/feedback-72.webp";
+import feedback73 from "@/assets/feedback/feedback-73.webp";
+import feedback74 from "@/assets/feedback/feedback-74.webp";
+import feedback75 from "@/assets/feedback/feedback-75.webp";
+import feedback76 from "@/assets/feedback/feedback-76.webp";
+import feedback77 from "@/assets/feedback/feedback-77.webp";
 
 export type FeedbackCategory = "experience" | "followup" | "craft";
 export interface Testimonial {
@@ -212,6 +222,96 @@ export const testimonials: Testimonial[] = [
     quote: "这个说的好准啊",
     service: "咨询报告 · 体验反馈",
     screenshot: feedback67,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "family-report-accurate",
+    category: "experience",
+    quote: "这个说的好准啊",
+    service: "深度报告 · 家属反馈",
+    screenshot: feedback68,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "yearly-return",
+    category: "followup",
+    quote: "不得不说，每年找你看牌是真的很准哪",
+    service: "年度塔罗 · 长期回访",
+    screenshot: feedback69,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "cleaning-business-boost",
+    category: "craft",
+    quote: "自从使用了 Hannah 的商业招财盘之后，业绩出现了非常明显的提升。原本几单还在观望、迟迟未确认的大项目，竟然在同一时期陆续敲定，一切顺得出乎意料地顺畅。对我来说，商业招财盘带来的不是迷信，而是一种“能量 + 思维清晰度 + 专注力”的综合效果。当人的频率稳了、心态对了，行动有效率，客户自然愿意跟随。",
+    service: "商业招财盘 · 客户评价",
+    screenshot: feedback70,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "wallpaper-4d",
+    category: "craft",
+    quote: "The wallpaper power lah bro haha … I strike my house number starter $20k / 果然有用",
+    service: "能量壁纸 · 好消息回访",
+    screenshot: feedback71,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "business-game-changer",
+    category: "experience",
+    quote: "Working with Hannah has been a game-changer for my business. I initially sought her guidance for a specific professional hurdle, but the insight she provided went far deeper than traditional consulting. She helped me identify and shift the underlying energy blocks that were stalling my progress. Since our sessions, I"ve noticed a significant increase in my professional clarity and a renewed sense of momentum in my ventures. If you are looking to align your business goals with a higher perspective, I cannot recommend her enough.",
+    service: "事业与商业咨询 · 客户评价",
+    screenshot: feedback72,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "tuning-reconnect",
+    category: "craft",
+    quote: "真是绝了 姐妹，每次我俩互删，每次调完频之后他都会给我打个电话。简直神了，都断连好几天了。我单方面为你封神了 姐妹，我要给你介绍客户",
+    service: "调频仪式 · 回访反馈",
+    screenshot: feedback73,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "new-order-3980",
+    category: "followup",
+    quote: "给你个反馈，今天收的3980代理，昨儿刚调的频",
+    service: "调频仪式 · 成交回访",
+    screenshot: feedback74,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "family-gratitude",
+    category: "craft",
+    quote: "Hannah has been a true blessing to my family. She helped my nephew pull through a very difficult period in the hospital with her incredible and heartfelt solution, and he is now steadily on the road to recovery. We are deeply grateful for her care, compassion, and dedication. I sincerely appreciate everything she has done for us and would highly recommend her to anyone seeking genuine guidance and support on their life journey.",
+    service: "家属感谢 · 个人体验分享，不构成医疗承诺",
+    screenshot: feedback75,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "voice-session-resonance",
+    category: "experience",
+    quote: "明白，是我😂 拿捏了",
+    service: "线上语音咨询 · 体验反馈",
+    screenshot: feedback76,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "wealth-candle",
+    category: "craft",
+    quote: "昨天刚点上招财蜡烛 今天就收4000+",
+    service: "招财蜡烛 · 手作反馈",
+    screenshot: feedback77,
     publicApproved: true,
     deidentified: true,
   },
