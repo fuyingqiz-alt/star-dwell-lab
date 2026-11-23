@@ -173,9 +173,9 @@
 }
 @layer base {
   :root {
-    --background: 268 55% 5%; --card: 268 42% 9%; --popover: 268 45% 7%;
-    --secondary: 270 38% 11%; --muted: 268 28% 15%; --input: 268 28% 20%;
-    --purple-glow: 275 70% 42%; --violet-haze: 262 65% 55%; --starlight: 46 80% 88%;
+    --background: 272 62% 4%; --card: 270 48% 8%; --popover: 270 50% 6%;
+    --secondary: 272 42% 10%; --muted: 270 32% 14%; --input: 270 32% 19%;
+    --purple-glow: 276 75% 45%; --violet-haze: 264 70% 58%; --starlight: 46 80% 88%;
   }
 }
 @layer components {

@@ -27,7 +27,7 @@ export default function HeroSection() {
       <p className="hero-copy mt-8 max-w-xl animate-fade-up-delay-1">{english ? "I’m Hannah, founder of Star Dwell Lab. Through tarot, astrology dice and birth charts, I help you explore choices in career, relationships and life transitions." : "我是美柒 Hannah，星宅所主理人。我用塔罗、占星骰子和星盘，陪你梳理事业、关系和人生转折中的选择。"}</p>
       <p className="mt-6 flex items-center gap-2.5 text-primary text-sm tracking-[0.25em] animate-fade-up-delay-2">
         <MoonStar className="w-4 h-4 shrink-0" aria-hidden="true" />
-        {english ? "Singapore · Online voice consultations" : "新加坡 · 线上语音咨询"}
+        {english ? "Singapore · Online voice consultations · In-person salons" : "新加坡 · 线上语音咨询 · 线下沙龙"}
       </p>
       <Button asChild size="lg" className="mt-10 h-12 btn-glow animate-fade-up-delay-3"><a href="#strategy">{english ? "View consultations & prices" : "查看咨询与价格"}<ArrowUpRight /></a></Button>
       <div className="mt-14 text-primary/70 flex items-center gap-4 float-subtle" aria-hidden="true"><span className="w-16 h-px bg-primary/40" /><MoonStar className="w-4 h-4 moon-ornament" /><ArrowDown className="w-4 h-4" /></div>
