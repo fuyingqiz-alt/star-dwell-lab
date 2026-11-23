@@ -264,7 +264,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "business-game-changer",
     category: "experience",
-    quote: "Working with Hannah has been a game-changer for my business. I initially sought her guidance for a specific professional hurdle, but the insight she provided went far deeper than traditional consulting. She helped me identify and shift the underlying energy blocks that were stalling my progress. Since our sessions, I"ve noticed a significant increase in my professional clarity and a renewed sense of momentum in my ventures. If you are looking to align your business goals with a higher perspective, I cannot recommend her enough.",
+    quote: "Working with Hannah has been a game-changer for my business. I initially sought her guidance for a specific professional hurdle, but the insight she provided went far deeper than traditional consulting. She helped me identify and shift the underlying energy blocks that were stalling my progress. Since our sessions, I’ve noticed a significant increase in my professional clarity and a renewed sense of momentum in my ventures. If you are looking to align your business goals with a higher perspective, I cannot recommend her enough.",
     service: "事业与商业咨询 · 客户评价",
     screenshot: feedback72,
     publicApproved: true,
