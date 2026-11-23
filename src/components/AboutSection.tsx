@@ -1,54 +1,15 @@
+import portrait from "@/assets/hannah-portrait.jpg";
+import { useLanguage } from "./LanguageProvider";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import hannahPortrait from "@/assets/hannah-portrait.jpg";
 
-const AboutSection = () => {
-  const { ref, visible } = useScrollReveal();
-
-  return (
-    <section id="about" className="py-24 md:py-32 bg-secondary/50">
-      <div className="container mx-auto px-6 max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-5xl font-light text-primary tracking-wide">
-            首席顾问
-          </h2>
-          <p className="font-heading text-lg text-silver mt-2 italic">The Consultant</p>
-          <div className="gold-line w-24 mx-auto mt-6" />
-        </div>
-
-        <div
-          ref={ref}
-          className={`flex flex-col md:flex-row gap-12 items-center transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <div className="w-64 h-80 md:w-72 md:h-[420px] flex-shrink-0 overflow-hidden rounded-sm border border-primary/20 shadow-lg">
-            <img
-              src={hannahPortrait}
-              alt="Hannah - Lead Consultant"
-              loading="lazy"
-              width={288}
-              height={420}
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-
-          <div className="flex-1 text-center md:text-left">
-            <p className="font-heading text-3xl md:text-4xl text-foreground mb-1 font-light">
-              Hannah
-            </p>
-            <p className="font-heading text-xl text-silver mb-1">(美柒)</p>
-            <p className="text-xs text-primary tracking-[0.2em] uppercase mb-8">Lead Metaphysics Consultant</p>
-            <p className="text-foreground/70 leading-relaxed text-sm md:text-base">
-              西方玄学体系整合专家。第二代传承，二十二载研习积淀。致力于将古老文明的智慧转化为现代精英阶层在不确定性中寻找确定性的认知工具。
-            </p>
-            <p className="text-foreground/40 leading-relaxed text-xs md:text-sm mt-4 italic">
-              An integrative Western Metaphysics specialist. Second-generation lineage with twenty-two years of dedicated study. Committed to translating ancient civilisational wisdom into cognitive tools for modern elites seeking certainty amid uncertainty.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default AboutSection;
+export default function AboutSection() {
+  const { english } = useLanguage();
+  const { ref, visible } = useScrollReveal(0.05);
+  return <section id="about" className="section-space"><div ref={ref} className={`page-width grid md:grid-cols-[0.8fr_1.2fr] gap-10 md:gap-20 items-center reveal ${visible ? "is-visible" : ""}`}>
+    <div className="portrait-frame max-w-sm w-full mx-auto relative"><img src={portrait} alt="美柒 Hannah" loading="lazy" className="w-full aspect-[4/5] object-cover object-top" /></div>
+    <div><p className="eyebrow mb-5">MEET HANNAH</p><h2 className="section-title">{english ? "About Hannah" : "关于美柒"}</h2><p className="font-heading text-3xl text-primary mt-6">美柒 Hannah</p><p className="text-muted-foreground text-sm mt-2">{english ? "Founder of Star Dwell Lab · Singapore" : "星宅所主理人 · 新加坡"}</p>
+      <div className="gold-line w-24 my-7" /><p className="text-foreground/90 leading-8">{english ? "I use tarot, astrology dice and birth charts to help you make sense of choices in career, relationships and life transitions. We begin with your current question and explore what matters, at your own pace." : "我用塔罗、占星骰子和星盘，陪你梳理事业、关系和人生转折中的选择。从你眼前的问题出发，一起看清在意的事情，找到自己的节奏。"}</p>
+      <p className="text-muted-foreground text-sm leading-7 mt-5">{english ? "An integrative Western Metaphysics specialist. Second-generation lineage with twenty-two years of dedicated study." : "西方玄学体系整合专家。第二代传承，二十二载研习积淀。"}</p>
+    </div>
+  </div></section>;
+}
