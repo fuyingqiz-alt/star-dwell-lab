@@ -9,6 +9,12 @@ export default function HeroSection() {
     <div className="hero-glow absolute inset-0" />
     <StarChart />
     <div className="hero-shade absolute inset-0" />
+    <span className="sparkle text-xs left-[30%] top-[8%]" style={{ animationDelay: "3.4s" }} aria-hidden="true">✦</span>
+    <span className="sparkle text-2xl left-[4%] top-[44%]" style={{ animationDelay: "1.8s" }} aria-hidden="true">☽</span>
+    <span className="sparkle sparkle-violet text-sm left-[38%] top-[82%]" style={{ animationDelay: "0.3s" }} aria-hidden="true">✧</span>
+    <span className="sparkle text-lg right-[6%] top-[36%]" style={{ animationDelay: "2.4s" }} aria-hidden="true">✦</span>
+    <span className="sparkle text-xl right-[38%] top-[88%]" style={{ animationDelay: "4s" }} aria-hidden="true">☾</span>
+    <span className="sparkle sparkle-violet text-xs right-[16%] top-[8%]" style={{ animationDelay: "1s" }} aria-hidden="true">✦</span>
     <span className="sparkle text-xl left-[8%] top-[22%]" aria-hidden="true">✦</span>
     <span className="sparkle sparkle-violet text-2xl left-[16%] top-[64%]" style={{ animationDelay: "1.2s" }} aria-hidden="true">✧</span>
     <span className="sparkle text-sm left-[46%] top-[14%]" style={{ animationDelay: "2s" }} aria-hidden="true">✦</span>

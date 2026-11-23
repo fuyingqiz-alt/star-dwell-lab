@@ -7,7 +7,7 @@ export default function StarChart() {
     const c = ref.current!; const ctx = c.getContext("2d")!;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let w = 0, h = 0, raf = 0;
-    const stars = Array.from({ length: 160 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.3 + 0.2, p: Math.random() * 6.28, s: Math.random() * 0.02 + 0.005 }));
+    const stars = Array.from({ length: 320 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.3 + 0.2, p: Math.random() * 6.28, s: Math.random() * 0.02 + 0.005 }));
     const resize = () => { const d = window.devicePixelRatio || 1; w = c.offsetWidth; h = c.offsetHeight; c.width = w * d; c.height = h * d; ctx.setTransform(d, 0, 0, d, 0, 0); };
     const gold = getComputedStyle(document.documentElement).getPropertyValue("--primary").trim();
     const violet = getComputedStyle(document.documentElement).getPropertyValue("--violet-haze").trim() || "262 65% 55%";
@@ -16,6 +16,7 @@ export default function StarChart() {
       stars.forEach((s, i) => {
         s.p += s.s; const a = 0.35 + Math.sin(s.p) * 0.35;
         ctx.fillStyle = `hsl(${i % 4 === 0 ? violet : gold} / ${a})`; ctx.beginPath(); ctx.arc(s.x * w, s.y * h, s.r, 0, 6.28); ctx.fill();
+        if (i % 23 === 0) { ctx.strokeStyle = `hsl(${gold} / ${a * 0.8})`; const x = s.x * w, y = s.y * h, l = 6 + s.r * 3; ctx.beginPath(); ctx.moveTo(x - l, y); ctx.lineTo(x + l, y); ctx.moveTo(x, y - l); ctx.lineTo(x, y + l); ctx.stroke(); }
         if (i % 9 === 0 && stars[i + 1]) { ctx.strokeStyle = `hsl(${gold} / 0.08)`; ctx.beginPath(); ctx.moveTo(s.x * w, s.y * h); ctx.lineTo(stars[i + 1].x * w, stars[i + 1].y * h); ctx.stroke(); }
       });
       if (!reduce) raf = requestAnimationFrame(draw);
@@ -44,6 +45,10 @@ export default function StarChart() {
         <circle cx="34" cy="-30" r="1.6" className="chart-planet" />
         <circle cx="42" cy="18" r="1.2" className="chart-planet" />
       </g>
+      {/* extra moon phases */}
+      <g transform="translate(-210 190)"><path d="M 0 -14 A 14 14 0 1 0 0 14 A 11 11 0 1 1 0 -14 Z" className="chart-moon" /></g>
+      <g transform="translate(-230 -150) scale(-1 1)"><path d="M 0 -10 A 10 10 0 1 0 0 10 A 8 8 0 1 1 0 -10 Z" className="chart-moon" /></g>
+      <circle cx="240" cy="160" r="9" className="chart-moon" opacity="0.7" />
     </svg>
   </div>;
 }
