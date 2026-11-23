@@ -6,12 +6,17 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/LanguageProvider";
 import { bookingLink } from "@/data/consultations";
+import spray from "@/assets/craft-spray.jpg";
+import incense from "@/assets/craft-incense.jpg";
+import oil from "@/assets/craft-oil.jpg";
+import bottle from "@/assets/craft-witch-bottle.jpg";
+import altar from "@/assets/ritual-altar.jpg";
 
 const products = [
-  { icon: Droplets, zh: "喷雾", en: "Sprays", d: "空间与随身使用的调和喷雾。", de: "Blended sprays for your space or to carry with you." },
-  { icon: Flame, zh: "香", en: "Incense", d: "日常静心与仪式使用的手作香。", de: "Handmade incense for quiet moments and rituals." },
-  { icon: Sparkles, zh: "精油", en: "Essential oils", d: "依据意图调配的精油。", de: "Oils blended around a personal intention." },
-  { icon: FlaskConical, zh: "巫瓶", en: "Ritual bottles", d: "封存心意的手作巫瓶。", de: "Handmade bottles that hold an intention." },
+  { icon: Droplets, zh: "喷雾", en: "Sprays", img: spray, d: "空间与随身使用的调和喷雾。", de: "Blended sprays for your space or to carry with you." },
+  { icon: Flame, zh: "香", en: "Incense", img: incense, d: "日常静心与仪式使用的手作香。", de: "Handmade incense for quiet moments and rituals." },
+  { icon: Sparkles, zh: "精油", en: "Essential oils", img: oil, d: "依据意图调配的精油。", de: "Oils blended around a personal intention." },
+  { icon: FlaskConical, zh: "巫瓶", en: "Ritual bottles", img: bottle, d: "封存心意的手作巫瓶。", de: "Handmade bottles that hold an intention." },
 ];
 const topics = [["事业与工作转折", "Career and work transitions"], ["关系与情感", "Relationships"], ["居家与空间", "Home and space"], ["新阶段的开始", "Starting a new chapter"]];
 const steps = [["发消息说明你的主题", "Message Hannah about your intention"], ["沟通细节与合适的方式", "Talk through details and a fitting approach"], ["确认安排与时间", "Confirm the arrangement and timing"], ["完成仪式并交付说明", "Ritual completed, with notes delivered"]];
@@ -25,11 +30,12 @@ export default function Workshop() {
       <p className="eyebrow mt-6">CRAFT & RITUAL</p><h1 className="page-title">{english ? "Craft & rituals" : "手作与仪式"}</h1></div>
     <section id="handmade" className="section-space border-t border-border scroll-mt-24"><div className="page-width">
       <div className="section-heading"><h2>{english ? "Handcrafted pieces" : "手作产品"}</h2><p className="text-muted-foreground mt-4">{english ? "Prices on enquiry." : "价格请咨询。"}</p></div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">{products.map(p => <article key={p.en} className="service-card border border-border bg-card rounded-sm p-5"><p.icon className="w-6 h-6 text-primary mb-5" /><h3 className="text-lg">{english ? p.en : p.zh}</h3><p className="text-muted-foreground text-sm leading-6 mt-2">{english ? p.de : p.d}</p></article>)}</div>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">{products.map(p => <article key={p.en} className="image-card service-card"><div className="aspect-square overflow-hidden"><img src={p.img} alt={english ? p.en : p.zh} loading="lazy" width={1024} height={1024} className="w-full h-full object-cover" /></div><div className="p-4 md:p-5"><p.icon className="w-5 h-5 text-primary mb-3" /><h3 className="text-lg">{english ? p.en : p.zh}</h3><p className="text-muted-foreground text-sm leading-6 mt-2">{english ? p.de : p.d}</p></div></article>)}</div>
       <Button asChild size="lg" className="mt-8 h-12 w-full sm:w-auto"><a href={bookingLink(english ? "Handcrafted pieces" : "询问手作")} target="_blank" rel="noopener noreferrer">{english ? "Ask about handcrafted pieces" : "询问手作"}<ArrowUpRight /></a></Button>
     </div></section>
     <section id="rituals" className="section-space border-t border-border scroll-mt-24"><div className="page-width">
-      <div className="section-heading"><h2>{english ? "Bespoke rituals" : "定制仪式"}</h2></div>
+      <div className="section-heading"><h2>{english ? "Bespoke magic rituals" : "定制魔法仪式"}</h2></div>
+      <div className="image-card mb-10 aspect-[16/9] md:aspect-[21/9]"><img src={altar} alt={english ? "Ritual altar with candles and planetary circle" : "烛光与行星法阵的仪式祭坛"} loading="lazy" width={1536} height={1024} className="w-full h-full object-cover" /></div>
       <div className="grid md:grid-cols-3 gap-8">
         <div><h3 className="footer-title">{english ? "Topics" : "可以咨询的主题"}</h3><ul className="mt-4 space-y-2 text-sm">{topics.map(t => <li key={t[1]}>· {english ? t[1] : t[0]}</li>)}</ul></div>
         <div><h3 className="footer-title">{english ? "How booking works" : "预约流程"}</h3><ol className="mt-4 space-y-2 text-sm">{steps.map((s, i) => <li key={s[1]}>{i + 1}. {english ? s[1] : s[0]}</li>)}</ol></div>
