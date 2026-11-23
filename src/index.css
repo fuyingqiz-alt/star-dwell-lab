@@ -128,3 +128,41 @@
 .float-subtle {
   animation: subtleFloat 6s ease-in-out infinite;
 }
+
+@layer base {
+  :root {
+    --background: 270 30% 6%; --foreground: 40 30% 92%;
+    --card: 270 25% 10%; --card-foreground: 40 30% 92%;
+    --popover: 270 25% 9%; --popover-foreground: 40 30% 92%;
+    --primary: 40 55% 62%; --primary-foreground: 270 30% 8%;
+    --secondary: 270 20% 12%; --secondary-foreground: 40 30% 92%;
+    --muted: 270 15% 16%; --muted-foreground: 40 12% 68%;
+    --accent: 40 55% 62%; --accent-foreground: 270 30% 8%;
+    --border: 40 35% 40% / 0.35; --input: 270 15% 22%; --ring: 40 55% 62%;
+    --beige: 38 40% 93%; --beige-foreground: 270 25% 12%;
+  }
+}
+@layer components {
+  .page-width { @apply mx-auto w-full max-w-6xl px-5 md:px-8; }
+  .section-space { @apply py-16 md:py-24; }
+  .section-heading { @apply mb-10 md:mb-14; }
+  .section-heading h2, .section-title { @apply text-3xl md:text-4xl leading-tight; }
+  .page-title { @apply text-4xl md:text-5xl mt-3; }
+  .eyebrow { @apply text-xs tracking-[0.3em] text-primary; }
+  .hero-section { min-height: 88dvh; padding-top: 5rem; }
+  .hero-shade { background: linear-gradient(180deg, hsl(var(--background) / 0.55), hsl(var(--background) / 0.9)); }
+  .hero-title { @apply text-4xl md:text-6xl leading-tight; }
+  .hero-copy { @apply text-base md:text-lg leading-8 text-foreground/85; }
+  .nav-link { @apply text-foreground/80 hover:text-primary transition-colors; }
+  .brand-lockup { @apply flex items-center gap-3; }
+  .service-card { @apply transition-colors hover:border-primary/70; }
+  .feedback-surface { background: hsl(var(--beige)); color: hsl(var(--beige-foreground)); }
+  .feedback-surface .text-muted-foreground { color: hsl(var(--beige-foreground) / 0.7); }
+  .feedback-surface .feedback-card { border-color: hsl(var(--beige-foreground) / 0.15); }
+  .qr-surface { @apply bg-foreground; }
+  .portrait-frame { @apply border border-primary/50 p-2; }
+  .footer-title { @apply text-lg text-primary; }
+  .footer-link { @apply inline-flex items-center gap-2 text-foreground/85 hover:text-primary transition-colors min-h-[44px]; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s, transform .7s; }
+  .reveal.is-visible { opacity: 1; transform: none; }
+}

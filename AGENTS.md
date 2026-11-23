@@ -3,4 +3,4 @@
 - Store confirmed consultation offerings in one typed data module, so rendered prices and booking subjects cannot diverge.
 - Render testimonials only through the public, deidentified approval filter; never seed production testimonials with examples.
 - Use shared accessible image dialogs for testimonial screenshots and booking QR codes, so zoom behavior and keyboard dismissal remain consistent.
-- Keep this revision frontend-only with bilingual copy and contact links; no booking data is collected by the site.
+- Keep this revision frontend-only with bilingual copy and contact links; no booking data is collected by the site.- Keep social platform links in one config module and render only entries with real URLs, so platforms can be added without touching layouts.
