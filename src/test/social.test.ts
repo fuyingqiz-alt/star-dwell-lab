@@ -7,8 +7,8 @@ describe("rules", () => {
     expect(visibleSocialLinks("brand", items).map(i => i.id)).toEqual(["tiktok"]);
   });
   it("shows the confirmed prices", () => {
-    expect(consultations.map(c => c.price)).toEqual([60, 188, 188, undefined]);
-    expect(consultations.find(c => c.id === "rhythm")?.minutes).toBe(20);
+    expect(consultations.map(c => c.price)).toEqual([88, 188, 188, undefined]);
+    expect(consultations.find(c => c.id === "rhythm")?.minutes).toBe(15);
     expect(consultations.some(c => c.title.includes("2027"))).toBe(false);
   });
   it("keeps the business consultation price on enquiry until confirmed", () => {
