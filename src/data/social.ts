@@ -2,7 +2,7 @@ export type SocialPlatform = "instagram" | "tiktok" | "facebook" | "xiaohongshu"
 export interface SocialLink { id: SocialPlatform; name: string; url: string; group: "brand" | "personal" }
 // Fill in real URLs only; entries with an empty url are never shown.
 export const socialLinks: SocialLink[] = [
-  { id: "instagram", name: "Instagram", url: "", group: "brand" },
+  { id: "instagram", name: "Instagram", url: "https://www.instagram.com/stardwelllab/", group: "brand" },
   { id: "tiktok", name: "TikTok", url: "", group: "brand" },
   { id: "facebook", name: "Facebook", url: "", group: "brand" },
   { id: "youtube", name: "YouTube", url: "", group: "brand" },

@@ -9,4 +9,8 @@ describe("rules", () => {
   it("shows the confirmed prices", () => {
     expect(consultations.map(c => c.price)).toEqual([99, 168, 198]);
   });
+  it("shows Instagram on the brand profile with a clean profile link", () => {
+    const instagram = visibleSocialLinks("brand").find(i => i.id === "instagram");
+    expect(instagram?.url).toBe("https://www.instagram.com/stardwelllab/");
+  });
 });
