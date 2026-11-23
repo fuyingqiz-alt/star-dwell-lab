@@ -1,3 +1,14 @@
+import feedback48 from "@/assets/feedback/feedback-48.webp";
+import feedback49 from "@/assets/feedback/feedback-49.webp";
+import feedback50 from "@/assets/feedback/feedback-50.webp";
+import feedback51 from "@/assets/feedback/feedback-51.webp";
+import feedback52 from "@/assets/feedback/feedback-52.webp";
+import feedback53 from "@/assets/feedback/feedback-53.webp";
+import feedback54 from "@/assets/feedback/feedback-54.webp";
+import feedback55 from "@/assets/feedback/feedback-55.webp";
+import feedback56 from "@/assets/feedback/feedback-56.webp";
+import feedback57 from "@/assets/feedback/feedback-57.webp";
+
 export type FeedbackCategory = "experience" | "followup" | "craft";
 export interface Testimonial {
   id: string;
@@ -10,7 +21,101 @@ export interface Testimonial {
   featured?: boolean;
 }
 // Only explicitly supplied, approved, deidentified client materials belong here.
-export const testimonials: Testimonial[] = [];
+export const testimonials: Testimonial[] = [
+  {
+    id: "relationship-clarity",
+    category: "experience",
+    quote: "来见你之前我自己觉得在感情里我处于很迷茫的一个状态，之前吸引到自己的，事实证明不是能走的很远的；而自己内心一部分需要的，又不是一开始能吸引到自己的。但是答案不是非黑即白的，是可以合二为一的。谢谢 Hannah 你全面、理性但温柔的指引，让我分清一个人能让我心动，和一个人建立长期稳定关系，是两件事情；与此同时也提醒我需要自己耐心观察和筛选。而自己一个人的这段时间，是很好的理清自己真正需求的时间，静待花开。",
+    service: "感情咨询 · 塔罗与星盘",
+    screenshot: feedback48,
+    publicApproved: true,
+    deidentified: true,
+    featured: true,
+  },
+  {
+    id: "natal-chart-experience",
+    category: "experience",
+    quote: "整体咨询体验感很好，老师很专业。前期准备就很充足，会让我提前准备好一些基础信息和困惑的问题，预约好时间之后也会准时开始。咨询过程中老师会将专业的星盘术语用我能听懂的话讲出来，对我今年年初发生过的一些变化分析也很精准，关于困扰我的问题的解答也很详细，能够指明方向，整体时长也很充实，谢谢老师的咨询～",
+    service: "本命盘深度咨询",
+    screenshot: feedback50,
+    publicApproved: true,
+    deidentified: true,
+    featured: true,
+  },
+  {
+    id: "first-reading-trust",
+    category: "experience",
+    quote: "没事没事，我懂，算的第一次的时候我就蛮信你的。太感谢小姐姐了，今天辛苦啦。",
+    service: "个人节奏速读",
+    screenshot: feedback56,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "maya-totem-experience",
+    category: "experience",
+    quote: "光玛雅图腾分析可能会觉得很抽象啥的，但是美柒老师会指引你回到现实中去重构逻辑链，直到最后你悟出来的东西和玛雅图腾的东西合二为一。最后还有行动指南。",
+    service: "玛雅图腾体验",
+    screenshot: feedback57,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "annual-forecast-verified",
+    category: "followup",
+    quote: "你说六月要花点钱，不然会受伤流血之类的。还真的准。",
+    service: "年运咨询 · 咨询后回访",
+    screenshot: feedback49,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "sc-citizenship-timing",
+    category: "followup",
+    quote: "完美预测我 SC citizenship 批准时间。她说最快 3 月 20 日出结果，我在 3 月 19 收到初步信号，今天早上正式收到 In Principal Approval！！！竟然可以预测的如此精准！",
+    service: "关键时间预测 · 咨询后回访",
+    screenshot: feedback52,
+    publicApproved: true,
+    deidentified: true,
+    featured: true,
+  },
+  {
+    id: "business-turnaround",
+    category: "followup",
+    quote: "去年 11、12 月，我们的业绩连续下滑，大概 30%。那段时间，其实不是不努力，而是明显感觉到——有些地方不顺。她立刻帮我整体情况梳理了一下后，然后再告诉我说马上就要来了，真的太神奇了。结果从那之后开始，几乎每天都有实实在在的大单进来。有 Hannah 产品及服务的加持真的突飞猛进，很多原本卡住的事，真的会一一立刻解决。",
+    service: "事业与商业决策咨询 · 咨询后回访",
+    screenshot: feedback53,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "job-offer-progress",
+    category: "followup",
+    quote: "工作算是定下来了，谢谢你的帮忙。",
+    service: "求职进展 · 咨询后回访",
+    screenshot: feedback55,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "big-order-news",
+    category: "followup",
+    quote: "今天收到了个大单！",
+    service: "咨询后回访 · 好消息分享",
+    screenshot: feedback51,
+    publicApproved: true,
+    deidentified: true,
+  },
+  {
+    id: "bowl-practice-followup",
+    category: "craft",
+    quote: "这种实践的就是你都不知道它会以什么样的方式帮你达成目的。",
+    service: "阿拉姆魔碗 · 实践回访",
+    screenshot: feedback54,
+    publicApproved: true,
+    deidentified: true,
+  },
+];
 export const feedbackCategories = [
   { id: "experience", title: "咨询体验", en: "Consultation experience" },
   { id: "followup", title: "咨询后回访", en: "After the consultation" },
