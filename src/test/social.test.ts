@@ -9,8 +9,14 @@ describe("rules", () => {
   it("shows the confirmed prices", () => {
     expect(consultations.map(c => c.price)).toEqual([99, 168, 198]);
   });
-  it("shows Instagram on the brand profile with a clean profile link", () => {
-    const instagram = visibleSocialLinks("brand").find(i => i.id === "instagram");
-    expect(instagram?.url).toBe("https://www.instagram.com/stardwelllab/");
+  it("shows the brand links the owner provided, with tracking params stripped", () => {
+    expect(visibleSocialLinks("brand").map(i => i.url)).toEqual([
+      "https://www.instagram.com/stardwelllab/",
+      "https://www.facebook.com/share/1A2ce173z4",
+      "https://www.youtube.com/channel/UCRAMrW_4vqbQjQTuvioC32g",
+    ]);
+  });
+  it("shows 小红书 under the personal group", () => {
+    expect(visibleSocialLinks("personal").map(i => i.url)).toEqual(["https://xhslink.cn/o/KUSzr4vsU4"]);
   });
 });

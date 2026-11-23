@@ -55,6 +55,11 @@
     @apply border-border;
   }
 
+  html {
+    /* keep section headings clear of the fixed header when jumping to #anchors */
+    scroll-padding-top: 6rem;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }

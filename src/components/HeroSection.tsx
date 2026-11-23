@@ -1,4 +1,4 @@
-import celestial from "@/assets/celestial-orbits.png.asset.json";
+import celestial from "@/assets/celestial-orbits.png";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "./LanguageProvider";
@@ -6,7 +6,7 @@ import { useLanguage } from "./LanguageProvider";
 export default function HeroSection() {
   const { english } = useLanguage();
   return <section className="hero-section relative overflow-hidden flex items-center">
-    <img src={celestial.url} alt="" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
+    <img src={celestial} alt="" className="absolute inset-x-0 bottom-0 top-auto h-[45%] w-full object-cover object-[right_top] md:h-[72%] md:object-top" fetchPriority="high" />
     <div className="hero-shade absolute inset-0" />
     <div className="page-width relative z-10 py-14 md:py-20">
       <p className="eyebrow mb-7 animate-fade-up">STAR-DWELL LAB <span className="mx-3">/</span> 星宅所</p>

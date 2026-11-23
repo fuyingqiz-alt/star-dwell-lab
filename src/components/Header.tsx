@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "./LanguageProvider";
-import logo from "@/assets/star-dwell-logo.png.asset.json";
+import logo from "@/assets/star-dwell-logo.jpg";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function Header() {
   ];
   return <header className="site-header fixed inset-x-0 top-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
     <div className="page-width flex items-center justify-between gap-3 h-20">
-      <Link to="/" className="brand-lockup shrink-0" aria-label="Star Dwell Lab 星宅所 首页"><img src={logo.url} alt="" className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover" /><span className="flex flex-col"><span className="font-heading text-base md:text-lg text-primary tracking-widest">STAR DWELL LAB</span><span className="text-sm text-primary/80 tracking-[0.4em]">星宅所</span></span></Link>
+      <Link to="/" className="brand-lockup shrink-0" aria-label="Star Dwell Lab 星宅所 首页"><img src={logo} alt="" className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover" /><span className="flex flex-col"><span className="font-heading text-base md:text-lg text-primary tracking-widest">STAR DWELL LAB</span><span className="text-sm text-primary/80 tracking-[0.4em]">星宅所</span></span></Link>
       <nav aria-label="主导航" className="hidden lg:flex items-center gap-7">{items.map(item => <Link className="nav-link text-sm" key={item.to} to={item.to}>{english ? item.en : item.zh}</Link>)}</nav>
       <div className="flex items-center gap-2 md:gap-4">
         <Button variant="ghost" size="sm" onClick={toggle} aria-label={english ? "切换中文" : "Switch to English"} className="text-muted-foreground px-2">{english ? "中" : "EN"}</Button>
